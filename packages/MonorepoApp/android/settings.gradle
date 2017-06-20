@@ -1,0 +1,3 @@
+rootProject.name = 'MonorepoApp'
+
+include ':app'
