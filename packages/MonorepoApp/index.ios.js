@@ -4,32 +4,14 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View
-} from 'react-native';
-
-export default class MonorepoApp extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
+} from 'react-native'
+import Todo from 'monorepo-domain'
 
 const styles = StyleSheet.create({
   container: {
@@ -38,16 +20,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
+  text: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
   },
-});
+})
 
-AppRegistry.registerComponent('MonorepoApp', () => MonorepoApp);
+export default class MonorepoApp extends Component {
+  render() {
+    const todo = new Todo('first task', 'setup lerna')
+    return (
+      <View style={styles.container}>
+        <Text style={styles.text}>{todo.title}</Text>
+        <Text style={styles.text}>{todo.task}</Text>
+      </View>
+    )
+  }
+}
+
+AppRegistry.registerComponent('MonorepoApp', () => MonorepoApp)

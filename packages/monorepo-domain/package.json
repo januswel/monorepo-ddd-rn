@@ -1,11 +1,8 @@
 {
-  "name": "ddd-monorepo",
+  "name": "monorepo-domain",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {
-    "lerna": "^2.0.0-rc.5"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
