@@ -1,0 +1,14 @@
+{
+  "name": "ddd-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "lerna": "^2.0.0-rc.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "januswel",
+  "license": "MIT"
+}
